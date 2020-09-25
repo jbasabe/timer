@@ -1,0 +1,52 @@
+* {
+  font-size: 48px;
+}
+
+.timer-table {
+  margin: auto;
+  text-align: center;
+}
+
+.digit {
+  text-align: center;
+}
+
+.initial {
+  font-style: italic;
+  font-size: 24px;
+  vertical-align: bottom;
+}
+
+.arrow-up, .arrow-down {
+  margin: none;
+  border: none;
+  padding: none;
+  background-color: transparent;
+  outline: none;
+  display: inline-block;
+}
+
+.input-digit {
+  font-size: 28px;
+  width: 1ch;
+  border: none;
+}
+
+.timer {
+  margin-top: 15vh;
+}
+
+.options {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.divider {
+  width: 3vw;
+  display: inline-block;
+}
+
+.option-button {
+  min-width: 20vw;
+  min-height: 12vh;
+}

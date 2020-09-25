@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script type="text/javascript" src="script.js"></script>
+  <body onload="loaded()">
+    <div class="timer">
+      <table class="timer-table">
+        <tr>
+          <td><span class="initial">h</span></td>
+          <td><span class="initial">h</span></td>
+          <td></td>
+          <td><span class="initial">m</span></td>
+          <td><span class="initial">m</span></td>
+          <td></td>
+          <td><span class="initial">s</span></td>
+          <td><span class="initial">s</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="digit" id="hour-tens">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+          <td>
+            <div class="digit" id="hour-ones">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+          <td>
+            :
+          </td>
+          <td>
+            <div class="digit" id="minute-tens">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+          <td>
+            <div class="digit" id="minute-ones">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+          <td>
+            :
+          </td>
+          <td>
+            <div class="digit" id="second-tens">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+          <td>
+            <div class="digit" id="second-ones">
+              <input type="button" class="arrow-up" value="&#9651;" onclick="changeNumber(1, this.parentNode.id)"><br>
+              <input type="text" class="input-digit" value="0" maxlength="1" onclick="this.select()"><br>
+              <input type="button" class="arrow-down" value="&#9661;" onclick="changeNumber(-1, this.parentNode.id)"><br>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="options">
+      <input type="button" class="option-button" value="Start" id="start" onclick="startStop()">
+      <div class="divider"></div>
+      <input type="button" class="option-button" value="Reset" onclick="reset()">
+    </div>
+  </body>
+</html>
