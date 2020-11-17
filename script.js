@@ -14,6 +14,11 @@ let title = '';
 
 function loaded() {
   startButton = document.getElementById("start");
+  document.getElementById("title").addEventListener("keyup", function(event) {
+    if (event.keyCode == 13) { // "Enter" key
+	  setTitle();
+	}
+  });
 }
 
 function mod(n, m) {
@@ -95,7 +100,6 @@ function startCountdown() {
 }
 
 function tick() {
-  console.log(timeLeft);
   timeLeft -= 1;
   if (timeLeft < 0) {
     clearInterval(interval);
