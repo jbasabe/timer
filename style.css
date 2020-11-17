@@ -50,3 +50,16 @@
   min-width: 20vw;
   min-height: 12vh;
 }
+
+.title-text {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.title-text-input {
+  font-size: 24px;
+}
+
+.title-button {
+  font-size: 28px;
+}

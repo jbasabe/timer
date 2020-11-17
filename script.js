@@ -10,6 +10,7 @@ let status = STATUS_ENUM.NOT_SET;
 let interval;
 let alarm = new Audio("alarm.mp3");
 alarm.loop = true;
+let title = '';
 
 function loaded() {
   startButton = document.getElementById("start");
@@ -66,7 +67,7 @@ function setTime(v) {
   for (let i=0; i<INPUT_SLOTS; i++) {
     document.getElementById(TIMER_IDS[i]).getElementsByClassName("input-digit")[0].value = v[i];
   }
-  document.title = `${v[0]}${v[1]}:${v[2]}${v[3]}:${v[4]}${v[5]}`;
+  document.title = `${title} ${v[0]}${v[1]}:${v[2]}${v[3]}:${v[4]}${v[5]}`;
 }
 
 function resetTime() {
@@ -143,6 +144,17 @@ function reset() {
   resetTime();
   editVisibility(true);
   startButton.value = "Start";
-  document.title = "Timer";
+  document.title = title || "Timer";
   status = STATUS_ENUM.NOT_SET;
+}
+
+function setTitle() {
+  title = document.getElementById("title").value;
+  document.title = title;
+}
+
+function clearTitle() {
+  title = '';
+  document.title = "Timer";
+  document.getElementById("title").value = '';
 }
