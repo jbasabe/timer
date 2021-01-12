@@ -10,6 +10,7 @@ let status = STATUS_ENUM.NOT_SET;
 let interval;
 let alarm = new Audio("alarm.mp3");
 alarm.loop = true;
+alarm.volume = 0.3;
 let title = '';
 
 function loaded() {
